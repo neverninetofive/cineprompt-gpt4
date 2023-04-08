@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     document.getElementById('copy-prompt').addEventListener('click', function () {
-        const promptResult = document.getElementById('prompt-result');
+        const promptResult = document.getElementById('prompt-output');
         promptResult.select();
         document.execCommand('copy');
     });
