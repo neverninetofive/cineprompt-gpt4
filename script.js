@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const promptResult = `${customStart} ${subject} ${genre} ${location} ${weather} ${cameraAngle} ${shotOn} ${lighting} ${timeOfDay} ${filmlook} ${photographerStyle} ${filmmakerStyle} --ar ${aspectRatio} --q ${quality} ${customEnd}`;
 
-        document.getElementById('prompt-result').value = promptResult;
+        document.getElementById('prompt-output').value = promptResult;
     });
 
     document.getElementById('copy-prompt').addEventListener('click', function () {
