@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('generate-prompt').addEventListener('click', function () {
+    document.getElementById('generate-prompt-btn').addEventListener('click', function () {
         const subject = document.getElementById('subject').value;
         const genre = document.getElementById('genre').value;
         const location = document.getElementById('location').value;
