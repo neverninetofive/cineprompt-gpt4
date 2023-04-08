@@ -25,3 +25,9 @@ document.getElementById('copy-prompt').addEventListener('click', function () {
     promptResult.select();
     document.execCommand('copy');
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('generate-prompt').addEventListener('click', function () {
+        // Fügen Sie hier den vorherigen JavaScript-Code ein, um die Werte abzurufen und den Prompt-Text zu erstellen
+    });
+});
