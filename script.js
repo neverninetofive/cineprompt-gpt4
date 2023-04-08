@@ -16,7 +16,25 @@ document.addEventListener('DOMContentLoaded', function () {
         const customStart = document.getElementById('custom-start').value;
         const customEnd = document.getElementById('custom-end').value;
 
-        const promptResult = `${customStart} ${subject} ${genre} ${location} ${weather} ${cameraAngle} ${shotOn} ${lighting} ${timeOfDay} ${filmlook} ${photographerStyle} ${filmmakerStyle} --ar ${aspectRatio} --q ${quality} ${customEnd}`;
+        const promptResultArray = [
+            customStart,
+            subject,
+            genre,
+            location,
+            weather,
+            cameraAngle,
+            shotOn,
+            lighting,
+            timeOfDay,
+            filmlook,
+            photographerStyle,
+            filmmakerStyle,
+            aspectRatio ? `--ar ${aspectRatio}` : "",
+            quality ? `--q ${quality}` : "",
+            customEnd
+        ];
+
+        const promptResult = promptResultArray.filter(Boolean).join(" ");
 
         document.getElementById('prompt-output').value = promptResult;
     });
