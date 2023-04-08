@@ -9,41 +9,53 @@
 </head>
 <body>
   <header>
-    <h1>Cineprompt GPT4 Version Alpha</h1>
-    <p>Erstelle deinen eigenen Image-Prompt für Midjourney!</p>
+    <h1>Cineprompt for Midjourney</h1>
+    <p>Create prompts for your cinematography & photography</p>
   </header>
   <main>
     <form>
       <label for="subject">Subject:</label>
       <select name="subject" id="subject">
-        <option value="">Bitte auswählen</option>
-        <option value="An old man">An old man</option>
-        <option value="A young woman">A young woman</option>
+        <option value="">Select or leave blank</option>
+        <option value="A elderly man">Old man</option>
+        <option value="A young man">Young man</option>
+        <option value="A young boy">Young boy</option>
+
+        <option value="A elderly woman">Old woman</option>
+        <option value="A young pretty woman">Young woman</option>
+        <option value="A young girl">Young girl</option>
+        
         <option value="A family">A family</option>
         <option value="A group of friends">A group of friends</option>
       </select>
 
       <label for="genre">Genre / Style:</label>
       <select name="genre" id="genre">
-        <option value="">Bitte auswählen</option>
-        <option value="Drama">Drama</option>
-        <option value="Comedy">Comedy</option>
-        <option value="Thriller">Thriller</option>
-        <option value="Science Fiction">Science Fiction</option>
+        <option value="">Select or leave blank</option>
+        <option value="Drama movie still">Drama</option>
+        <option value="Indie movie still">Indiefilm</option>
+        <option value="Documentary movie still">Documentary</option>
+        <option value="Comedy movie still">Comedy</option>
+        <option value="Thriller movie still">Thriller</option>
+        <option value="Horror movie still">Horror</option>
+        <option value="Sci-Fi movie still">Science Fiction</option>
+        <option value="Youtube Travel Film">Travel Film</option>
+        <option value="Netflix original show cinestill">Netflix Style</option>
+        
       </select>
 
       <label for="location">Location:</label>
       <select name="location" id="location">
-        <option value="">Bitte auswählen</option>
-        <option value="Western countryside in Nevada">Western countryside in Nevada</option>
-        <option value="A futuristic city">A futuristic city</option>
+        <option value="">Select or leave blank</option>
+        <option value="Outdoor photograph">Outdoor</option>
+        <option value="Indoor photograph">Indoor</option>
         <option value="A deserted island">A deserted island</option>
         <option value="A busy airport">A busy airport</option>
       </select>
 
       <label for="weather">Weather:</label>
       <select name="weather" id="weather">
-        <option value="">Bitte auswählen</option>
+        <option value="">Select or leave blank</option>
         <option value="Sunny">Sunny</option>
         <option value="Cloudy">Cloudy</option>
         <option value="Rainy">Rainy</option>
@@ -52,7 +64,7 @@
 
       <label for="camera-angle">Camera angle:</label>
       <select name="camera-angle" id="camera-angle">
-        <option value="">Bitte auswählen</option>
+        <option value="">Select or leave blank</option>
         <option value="Wide angle">Wide angle</option>
         <option value="Close-up">Close-up</option>
         <option value="Bird's eye view">Bird's eye view</option>
@@ -61,24 +73,27 @@
 
       <label for="shot-on">Shot on:</label>
       <select name="shot-on" id="shot-on">
-        <option value="">Bitte auswählen</option>
-        <option value="Canon">Canon</option>
-        <option value="Nikon">Nikon</option>
-        <option value="Sony">Sony</option>
-        <option value="Fujifilm">Fujifilm</option>
+        <option value="">Select or leave blank</option>
+        <option value="Shot on Canon">Canon</option>
+        <option value="Shot on Nikon">Nikon</option>
+        <option value="Shot on Sony">Sony</option>
+        <option value="Shot on Fujifilm">Fujifilm</option>
+        <option value="Shot on Kodachrome">Kodak Film</option>
+        <option value="Shot on Rollei Prego 90">Rollei Prego</option>
       </select>
 
       <label for="lighting">Lighting:</label>
       <select name="lighting" id="lighting">
-        <option value="">Bitte auswählen</option>
+        <option value="">Select or leave blank</option>
         <option value="Daylight">Daylight</option>
         <option value="Cinematic lighting at sunset">Cinematic lighting at sunset</option>
         <option value="Fluorescent lighting">Fluorescent lighting</option>
         <option value="Warm candlelight">Warm candlelight</option>
         </select>
+        
         <label for="time-of-day">Time of the day:</label>
         <select name="time-of-day" id="time-of-day">
-          <option value="">Bitte auswählen</option>
+          <option value="">Select or leave blank</option>
           <option value="Morning">Morning</option>
           <option value="Afternoon">Afternoon</option>
           <option value="Evening">Evening</option>
@@ -87,34 +102,30 @@
       
         <label for="filmlook">Filmlook:</label>
         <select name="filmlook" id="filmlook">
-          <option value="">Bitte auswählen</option>
+          <option value="">Select or leave blank</option>
           <option value="Noir film look">Noir film look</option>
           <option value="Vintage film look">Vintage film look</option>
           <option value="Modern film look">Modern film look</option>
           <option value="Grainy film look">Grainy film look</option>
         </select>
       
-        <label for="in-the-style-of-photographer">In the style of photographer:</label>
-        <select name="in-the-style-of-photographer" id="photographer-style">
-          <option value="">Bitte auswählen</option>
-          <option value="Ansel Adams">Ansel Adams</option>
-          <option value="Annie Leibovitz">Annie Leibovitz</option>
-          <option value="Henri Cartier-Bresson">Henri Cartier-Bresson</option>
-          <option value="Dorothea Lange">Dorothea Lange</option>
-        </select>
+  
+
+        <label for="photographer">In the style of Photographer:</label>
+        <input list="photographer-list" name="photographer" id="photographer" placeholder="Search or type your favorite artist">
+        <datalist id="photographer-list">
+          <option value="Ansel Adams">
+          <option value="Annie Leibovitz">
+          <option value="Henri Cartier-Bresson">
+          <option value="Dorothea Lange">
+        </datalist>
+        
       
-        <label for="in-the-style-of-filmmaker">In the style of filmmaker:</label>
-        <select name="in-the-style-of-filmmaker" id="filmmaker-style">
-          <option value="">Bitte auswählen</option>
-          <option value="Alfred Hitchcock">Alfred Hitchcock</option>
-          <option value="Stanley Kubrick">Stanley Kubrick</option>
-          <option value="Quentin Tarantino">Quentin Tarantino</option>
-          <option value="Christopher Nolan">Christopher Nolan</option>
-        </select>
+  
       
         <label for="aspect-ratio">Aspect ratio:</label>
         <select name="aspect-ratio" id="aspect-ratio">
-          <option value="">Bitte auswählen</option>
+          <option value="">Select or leave blank</option>
           <option value="4:3">4:3</option>
           <option value="16:9">16:9</option>
           <option value="1.85:1">1.85:1</option>
@@ -123,11 +134,9 @@
       
         <label for="quality">Quality:</label>
         <select name="quality" id="quality">
-          <option value="">Bitte auswählen</option>
-          <option value="Low quality">Low quality</option>
-          <option value="Medium quality">Medium quality</option>
-          <option value="High quality">High quality</option>
-          <option value="4K resolution">4K resolution</option>
+          <option value="">Select or leave blank</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
         </select>
       
         <label for="custom-input-beginning">Custom input at beginning:</label>
